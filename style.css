@@ -1,0 +1,285 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+html,body {
+   height: 100%;
+   width: 100%;
+   overflow-x: hidden;
+   position: relative;
+}
+
+*>p, h1, h2, h3, ul, li:hover {
+    cursor: default;
+}
+
+.wrapper {
+    background-color: #0C1022;
+}
+
+.pg1 {
+    height: 100vh;
+    width: 100vw;
+    background: #0c1022;
+    color: #fff;
+   
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:link {
+    color: #fff;
+}
+
+.navbar a:hover,
+.navbar a.active,
+.navbar a:focus {
+    color: #0ef;
+}
+
+.header>.contact {
+    content: "";
+    height: 100vh;
+    width: 25%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background-color: #ffffff23;
+    color: #fff;
+    backdrop-filter: blur(30px);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+    transition:  .5s;
+}
+
+.header .contact .top {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+
+.header .contact .top i {
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+.header .contact .top i:hover {
+    color: #0ef;
+}
+
+.header .contact a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+}
+
+.header .contact a:hover {
+    color: #0ef;
+}
+
+.header .contact .icon {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vh 0;
+    padding: 0 2vw;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    max-width: 600px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    transform: translateZ(50px);
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0ef;
+    transform: translateZ(30px);
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+    transform: translateZ(20px);
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    transform: translateZ(40px);
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #0ef;
+    border: 2px solid #0ef;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #0ef;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: #0ef;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #0ef;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+#about {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0c1022;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    transition: all ease .3s;
+    
+}
+
+#about ul li {
+    margin: 2vh 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .navbar a {
+        margin-left: 20px;
+    }
+
+    .home {
+        padding: 0 5%;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .btn-box {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .btn-box {
+        width: 250px;
+    }
+
+    .btn-box a {
+        width: 120px;
+        font-size: 16px;
+    }
+}
