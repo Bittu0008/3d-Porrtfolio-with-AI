@@ -474,7 +474,7 @@ let tl = gsap.timeline({
     scrollTrigger:{
         trigger:"#about",
         scroller:".wrapper",
-        markers:true,
+        // markers:true,
         start:"top 80%",
         end:"top top",
         scrub:1,
